@@ -70,8 +70,65 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 
 5. Maintenant on va calculer la distance moyenne dans le réseau. Le calcul des plus courts chemins entre toutes les paires de nœuds prendra plusieurs heures pour cette taille de réseau. C'est pourquoi on va estimer la distance moyenne par échantillonnage en faisant un parcours en largeur à partir de 1000 sommets choisis au hasard. L'hypothèse des six degrés de séparation se confirme-t-elle ? Est-ce qu'il s'agit d'un réseau petit monde ? Quelle sera la distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques ? Tracez également la *distribution* des distances. Formulez une hypothèse sur la loi de cette distribution.
 
-    **TODO**
+- Avec notre échantillonnage on a une distance moyenne de 6.796943058534124.
+- Donc, l'hypothèse des six degrés de séparation se confirme.
+- Pour que le réseau soit un réseau type petit monde, on doit avoir: davg ~=  lnN/lnM
+  	ou davg est la distance moyenne.
+  	et N est le nombre de noeuds.
+  	et M est le degres moyen.
+  Dans notre cas on a lnN/lnM = 6,700611819.
+  et davg = 6.796943058534124.
+  
+  Donc, notre réseau est bien un réseau type petit monde.
+  
+- La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
 
+- Voiçi la distribution des distances:
+     ![distribution des distances](./distancesDistrobution.png)
+  
+  On a utilisé le script gnuplot ci dessous:
+  ```gnuplot
+  
+  	set terminal png
+	set title "Distance distribution"
+	set xlabel 'd'
+	set ylabel 'p(d)'
+	set output 'distancesDistrobution.png'
+
+	plot 'distancesHistogram.dat' with lines title 'distances histogram to distance distribution'
+  
+  ```
+  Avec les données de notre histogram de distances (en les affichant avec printf):
+  
+  ```txt
+     0       1000.00000000
+     1       6766.00000000
+     2      82014.00000000
+     3     995772.00000000
+     4    8768203.00000000
+     5   41656189.00000000
+     6   89316067.00000000
+     7   89988564.00000000
+     8   52734971.00000000
+     9   22155115.00000000
+    10    7609885.00000000
+    11    2464412.00000000
+    12     855664.00000000
+    13     316430.00000000
+    14      97141.00000000
+    15      24301.00000000
+    16       5824.00000000
+    17       1282.00000000
+    18        314.00000000
+    19         75.00000000
+    20         10.00000000
+    21          1.00000000
+  
+  ```
+  
+- On voit que la distribution des distances est en forme de cloche. On peut supposer que la loi derrière est une de poisson/binomiale.
+	
+	
 6. Utilisez les générateurs de GraphStream pour générer un réseau aléatoire et un réseau avec la méthode d'attachement préférentiel (Barabasi-Albert) qui ont la même taille et le même degré moyen. Refaites les mesures des questions précédentes pour ces deux réseaux. Les résultats expérimentaux correspondent-ils aux prédictions théoriques ? Comparez avec le réseau de collaboration. Que peut-on conclure ?
 
     **TODO**
@@ -85,3 +142,13 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
     Essayez d'implanter un tel générateur et voir les résultats qu'il donne.
 
     **TODO**
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
