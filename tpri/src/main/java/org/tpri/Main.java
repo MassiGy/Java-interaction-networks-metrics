@@ -13,6 +13,7 @@ import org.graphstream.algorithm.Toolkit;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.Locale;
 
 
 public class Main {
@@ -34,7 +35,15 @@ public class Main {
         System.out.println("averageDegree: " + Toolkit.averageDegree(graph));
         System.out.println("averageClusteringCoefficient: " + Toolkit.averageClusteringCoefficient(graph));
         System.out.println("averageClusteringCoefficient in a similar  graph that is random: " +Toolkit.averageDegree(graph) /graph.getNodeCount());
-    
+
         System.out.println("is the graph connected: "+ Toolkit.isConnected(graph));
+
+        int[] dd = Toolkit.degreeDistribution(graph);
+        for (int k = 0; k < dd.length; k++) {
+            if (dd[k] != 0) {
+                System.out.printf(Locale.US, "%6d%20.8f%n", k, (double)dd[k] / graph.getNodeCount());
+            }
+        }
+
     }
 }
