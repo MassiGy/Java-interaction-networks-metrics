@@ -30,7 +30,18 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 3. Le réseau est-il connexe ? Un réseau aléatoire de la même taille et degré moyen sera-t-il connexe ? À partir de quel degré moyen un réseau aléatoire avec cette taille devient connexe ?
 
 - Oui le graph est connexe.
-- 
+- Un réseau aléatoire de la même taille et degré moyen est connexe ssi M/LogN > 1.
+    ou M = la moyenne des degrès des noeuds.
+    et N = le nombre de noeuds.
+
+  Dans notre cas on a M = 6.62208890914917
+  et logN = log(317080) = 12,666909387
+  Donc M/logN = 0,522786475
+  
+  Donc un réseau aléatoire de la même taille et degré moyen est non connexe.
+
+- Pour qu'un graph aléatoire avec la même taille soit connexe, le degrès moyen M doit être strictement plus grand que 12,666909387
+
 
 4. Calculez la distribution des degrés et tracez-la avec `gnuplot` (ou avec votre outil préféré) d'abord en échelle linéaire, ensuite en échelle log-log. Est-ce qu'on observe une ligne droite en log-log ? Que cela nous indique ? Tracez la distribution de Poisson avec la même moyenne pour comparaison. Utilisez la commande `fit` de `gnuplot` pour trouver les coefficients de la loi de puissance et tracez-la.
 
