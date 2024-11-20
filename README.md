@@ -62,9 +62,9 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
     p_k = C k^{-\gamma}
     ```
 
-    On utilise ce [script](/gnuplot/plot_dd.gnu) pour tracer la distribution et estimer l'exposant de la loi de puissance.
+    On utilise ce [script](./plot_dd.gnu) pour tracer la distribution et estimer l'exposant de la loi de puissance.
 
-    ![distribution des degrés](/gnuplot/dd_dblp.png)
+    ![distribution des degrés](./dd_dblp.png)
 
     On a $`\gamma = 2.7 \pm 0.04`$
 
