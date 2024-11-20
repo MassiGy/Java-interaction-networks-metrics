@@ -77,15 +77,13 @@ public class Main {
         System.out.println("avgDistance: " + avgDistance / (double) sum);
 
 
-        /*
+
         // print out the distances histogram and use gnuplot to draw the distance
         // distribution.
-        
         for (int i = 0; i < distancesHistogram.length; i++) {
             System.out.println();
-            System.out.printf(Locale.US, "%6d%20.8f%n", i, (double)distancesHistogram[i]);
+            System.out.printf(Locale.US, "%6d%20.8f%n", i, (double)distancesHistogram[i]/(nbNodes*graph.getNodeCount()));
         }
-         */
 
 
     }
