@@ -10,11 +10,27 @@ GraphStream permet de mesurer de nombreuses caractéristiques d'un réseau. La p
 
 2. Prenez quelques mesures de base: nombre de nœuds et de liens, degré moyen, coefficient de clustering. Quel sera le coefficient de clustering pour un réseau aléatoire de la même taille et du même degré moyen ?
 
-    **TODO**
+- NodeCount: 317080
+- EdgeCount: 1049866
+- averageDegree: 6.62208890914917
+- averageClusteringCoefficient: 0.6324308280637396
+
+Quel sera le coefficient de clustering pour un réseau aléatoire de la même taille et du même degré moyen ?
+
+Étant donné que le coefficient de clustering Ci calcule la probabilité qu'un noeud i soit relié à un
+autre.
+Donc, dans un graph aléatoire, la probabilité est la même pour tout les noeuds du graph.
+
+Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre des degrès.
+
+- averageClusteringCoefficient in a similar  graph that is random: 2.0884599814397534E-5
+
+
 
 3. Le réseau est-il connexe ? Un réseau aléatoire de la même taille et degré moyen sera-t-il connexe ? À partir de quel degré moyen un réseau aléatoire avec cette taille devient connexe ?
 
-    **TODO**
+- Oui le graph est connexe.
+- 
 
 4. Calculez la distribution des degrés et tracez-la avec `gnuplot` (ou avec votre outil préféré) d'abord en échelle linéaire, ensuite en échelle log-log. Est-ce qu'on observe une ligne droite en log-log ? Que cela nous indique ? Tracez la distribution de Poisson avec la même moyenne pour comparaison. Utilisez la commande `fit` de `gnuplot` pour trouver les coefficients de la loi de puissance et tracez-la.
 
