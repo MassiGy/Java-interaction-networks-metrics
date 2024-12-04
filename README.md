@@ -84,7 +84,7 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
 
 - Voiçi la distribution des distances:
-     ![distribution des distances](./distancesDistrobution.png)
+     ![distribution des distances](./distancesDistribution.png)
   
   On a utilisé le script gnuplot ci dessous:
   ```gnuplot
@@ -131,17 +131,31 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 	
 6. Utilisez les générateurs de GraphStream pour générer un réseau aléatoire et un réseau avec la méthode d'attachement préférentiel (Barabasi-Albert) qui ont la même taille et le même degré moyen. Refaites les mesures des questions précédentes pour ces deux réseaux. Les résultats expérimentaux correspondent-ils aux prédictions théoriques ? Comparez avec le réseau de collaboration. Que peut-on conclure ?
 
-    **TODO**
 
-7. (*Question bonus*) S'il y a une caractéristique du réseau de collaboration que le modèle de Barabasi-Albert n'arrive pas à reproduire c'est le coefficient de clustering. Est-ce qu'on peut espérer faire mieux avec une variante de la méthode de copie :
+***Graph aléa:***
 
-    * Le nouveau nœud choisit au hasard un nœud `v`.
-    * Ensuite il parcourt tous les voisins de `v` et se connecte à eux avec probabilité `p`.
-    * À la fin il se connecte à `v`
+- NodeCount: 317090
+- EdgeCount: 1108857
+- averageDegree: 6.99395751953125
+- averageClusteringCoefficient: 2.5155159000996033E-5
+- averageClusteringCoefficient in a similar  graph that is random: 2.2056695321616104E-5
+- is the graph connected: false
+- avgDistance: 6.728634727946078
+ 
 
-    Essayez d'implanter un tel générateur et voir les résultats qu'il donne.
+- Voiçi la distribution des degrés: 
+    
+    ![distribution des degrés](./dd_dblp.random.png)
+    
+    --- 
 
-    **TODO**
+- Voiçi la distribution des distances: 
+    
+    ![distribution des distances](./distancesDistribution.random.png)
+    
+    
+   
+***Graph préférentiel:***
     
     
     
