@@ -153,18 +153,22 @@ public class Main {
         }
  */
 
-
+ /*
         {
-   /*
+
                 In our graph we have:
 
                 - NodeCount: 317080
                 - EdgeCount: 1049866
                 - averageDegree: 6.62208890914917
- */
+
             Graph graph = randomPreferencielGraph(317082, 6.62208890914917);
             doAnalysis(graph);
         }
+*/
+
+
+
 
 
     }
