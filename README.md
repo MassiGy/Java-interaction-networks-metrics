@@ -195,28 +195,23 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 # Propagation dans des réseaux
 
 
-1. Quel est le taux de propagation du virus ? 
+1. 
 
-   la probabilité de contaminer un collaborateur est de 1/7 ( un mail par semaine ).
-   
-   L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15.
+la probabilité de contaminer un collaborateur est de 1/7 ( un mail par semaine ).
 
-   Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
+L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15.
 
-   
-   
-   le seuil épidémique du réseau est : 
-	lambdaC =  <k> / < k*k > = 0,045786096.
-	car on a  <k> =  6.62208890914917.
-	et <k^2> = 144,631.
+Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
 
-   Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:
-   	
-	Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763
-	
-	Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering.
-	
-	
+
+
+le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0,045786096. Car on a  <k> =  6.62208890914917, et <k^2> = 144,631.
+
+Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:
+
+- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering.
+
+
 2. Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
 
     
