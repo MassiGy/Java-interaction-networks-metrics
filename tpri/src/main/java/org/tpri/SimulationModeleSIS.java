@@ -16,10 +16,15 @@ public class SimulationModeleSIS {
     SimulationModeleSIS(double infectionProbability, double recoveryProbability, List<Node> susceptibleNodes) {
         this.infectionProbability = infectionProbability;       // in our example it will be 1 per week (1/7)
         this.recoveryProbability = recoveryProbability;         // in our example it will be 1 per 15 days ( 2 times a month )
-        this.susceptibleNodes = new ArrayList<>(susceptibleNodes);  // all nodes are susceptible initially
-        this.infectedNodes = new ArrayList<>();
-        infectionOf(susceptibleNodes.get(0));  // start with one infected individual
 
+        this.susceptibleNodes = new ArrayList<>(susceptibleNodes);  // all nodes are susceptible initially
+        for(Node n: this.susceptibleNodes) {
+            n.setAttribute("infected", false);
+        }
+
+        this.infectedNodes = new ArrayList<>();
+
+        infectionOf(susceptibleNodes.get(0));  // start with one infected individual
     }
 
 
@@ -45,13 +50,15 @@ public class SimulationModeleSIS {
         Iterator<Node> neighborsIt = node.getBreadthFirstIterator();
         while (neighborsIt.hasNext()) {
             Node neighbor = neighborsIt.next();
-            if (this.susceptibleNodes.contains(neighbor)) {
+            if ((boolean) neighbor.getAttribute("infected") ==  false) {
                 if (Math.random() < this.infectionProbability) {
                     infectionOf(neighbor);
                 }
             }
         }
-        if (this.infectedNodes.contains(node)) {
+
+        // maybe at the end of the day the current node will recover
+        if ((boolean) node.getAttribute("infected") ==  true) {
             if (Math.random() < this.recoveryProbability) {
                 recoveryOf(node);
             }
@@ -60,11 +67,13 @@ public class SimulationModeleSIS {
 
     private void infectionOf(Node node) {
         this.infectedNodes.add(node);
+        node.setAttribute("infected", true);
         this.susceptibleNodes.remove(node);
     }
 
     private void recoveryOf(Node node) {
         this.infectedNodes.remove(node);
+        node.setAttribute("infected", false);
         this.susceptibleNodes.add(node);
     }
 
