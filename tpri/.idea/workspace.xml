@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e1405b1-ca28-4229-952a-54d56a34428e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distance_distribution_question5.gnu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancesDistrobution.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fit.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distance_distribution.random.gnu" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" afterDir="false" />
     </list>

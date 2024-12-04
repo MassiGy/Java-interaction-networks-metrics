@@ -157,9 +157,25 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
    
 ***Graph préférentiel:***
     
+- NodeCount: 317084
+- EdgeCount: 1269742
+- averageDegree: 8.008868217468262
+- averageClusteringCoefficient: 4.300926930010513E-4
+- averageClusteringCoefficient in a similar  graph that is random: 2.5257875570726564E-5
+- is the graph connected: true
     
     
+ 
+
+- Voiçi la distribution des degrés: 
     
+    ![distribution des degrés](./dd_dblp.preferentiel.png)
+    
+    --- 
+
+- Voiçi la distribution des distances: 
+    
+    ![distribution des distances](./distancesDistribution.preferentiel.png)
     
     
     

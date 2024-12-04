@@ -45,7 +45,7 @@ public class Main {
         gen.addSink(graph);
         gen.begin();
 
-        for(int i = 0; i < nodeCount; i++) {
+        for (int i = 0; i < nodeCount; i++) {
             gen.nextEvents();
         }
 
@@ -82,7 +82,7 @@ public class Main {
         int[] degreeDistribution = Toolkit.degreeDistribution(graph);
         for (int k = 0; k < degreeDistribution.length; k++) {
             if (degreeDistribution[k] != 0) {
-                System.out.printf(Locale.US, "%6d%20.8f%n", k, (double)degreeDistribution[k] / graph.getNodeCount());
+                System.out.printf(Locale.US, "%6d%20.8f%n", k, (double) degreeDistribution[k] / graph.getNodeCount());
             }
         }
 
@@ -114,7 +114,6 @@ public class Main {
         System.out.println("avgDistance: " + avgDistance / (double) sum);
 
 
-
         // print out the distances histogram and use gnuplot to draw the distance
         // distribution.
         for (int i = 0; i < distancesHistogram.length; i++) {
@@ -123,13 +122,11 @@ public class Main {
             // a graph of n nodes where n = graph.getNodeCount(),
             // so we multiply nbNodes*graph.getNodeCount() since we calculated the distance between these nbNodes and all the nodes from the
             // rest of the graph
-            System.out.printf(Locale.US, "%6d%20.8f%n", i, (double)distancesHistogram[i]/(nbNodes*graph.getNodeCount()));
+            System.out.printf(Locale.US, "%6d%20.8f%n", i, (double) distancesHistogram[i] / (nbNodes * graph.getNodeCount()));
         }
 
 
-
     }
-
 
 
     public static void main(String args[]) {
@@ -142,34 +139,32 @@ public class Main {
 
          */
 
-
+/*
         {
-            /*
+
                 In our graph we have:
 
                 - NodeCount: 317080
                 - EdgeCount: 1049866
                 - averageDegree: 6.62208890914917
-             */
+
             Graph graph = randomGen(317082, 6.62208890914917);
             doAnalysis(graph);
         }
+ */
 
 
-        /*
         {
-
+   /*
                 In our graph we have:
 
                 - NodeCount: 317080
                 - EdgeCount: 1049866
                 - averageDegree: 6.62208890914917
-
+ */
             Graph graph = randomPreferencielGraph(317082, 6.62208890914917);
             doAnalysis(graph);
         }
-        */
-
 
 
     }

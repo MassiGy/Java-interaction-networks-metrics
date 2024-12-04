@@ -1,0 +1,36 @@
+
+
+*******************************************************************************
+Wed Dec  4 09:22:09 2024
+
+
+FIT:    data read from 'dd_dblp.preferentiel.dat' using (log($1)):(log($2))
+        format = x:z
+        #datapoints = 332
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = lc - gamma * x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   lc            gamma        
+   0 1.5143275409e+04   0.00e+00  3.67e+00    1.000000e+00   1.000000e+00
+   3 2.5456226214e+02  -5.04e-02  3.67e-03    3.563020e-02   2.130089e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 254.562
+rel. change during last iteration : -5.03583e-07
+
+degrees of freedom    (FIT_NDF)                        : 330
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.878294
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.771401
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+lc              = 0.0356302        +/- 0.2169       (608.7%)
+gamma           = 2.13009          +/- 0.0426       (2%)
+
+correlation matrix of the fit parameters:
+                lc     gamma  
+lc              1.000 
+gamma           0.975  1.000 
