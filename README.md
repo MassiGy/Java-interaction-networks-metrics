@@ -163,7 +163,7 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 - averageClusteringCoefficient: 4.300926930010513E-4
 - averageClusteringCoefficient in a similar  graph that is random: 2.5257875570726564E-5
 - is the graph connected: true
-    
+- avgDistance: 4.877203611661264    
     
  
 
