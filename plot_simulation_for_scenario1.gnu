@@ -2,7 +2,7 @@
 
 # Set the output to a PNG file (optional, can be omitted for interactive plotting)
 set terminal pngcairo enhanced
-set output 'propagation_plot_for_sis_modal.png'
+set output 'propagation_plot_for_scenario1.png'
 
 # Set titles and labels
 set title "Propagation of Susceptible and Infected Nodes"
@@ -13,8 +13,9 @@ set ylabel "Node Count"
 set grid
 
 # Plot the data as two curves, one for Susceptible and one for Infected
-plot 'sis_simulation_results.txt' using 1:2 with lines title 'Susceptible Nodes Count', \
-     'sis_simulation_results.txt' using 1:3 with lines title 'Infected Nodes Count'
+plot 'scenario1_simulation_results.txt' using 1:2 with lines title 'Susceptible Nodes Count', \
+     'scenario1_simulation_results.txt' using 1:3 with lines title 'Infected Nodes Count',
+
 
 # Unset the output if plotting interactively
 unset output

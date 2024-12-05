@@ -9,14 +9,8 @@ import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.DefaultGraph;
 import org.graphstream.graph.implementations.SingleGraph;
-import org.graphstream.stream.file.FileSource;
-import org.graphstream.stream.file.FileSourceDGS;
 import org.graphstream.stream.file.FileSourceEdge;
-import org.graphstream.stream.file.FileSourceFactory;
-import org.graphstream.ui.view.Viewer;
-import org.graphstream.algorithm.Toolkit;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -159,9 +153,12 @@ public class Main {
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
-            int daysCount = 2* 30;
-            SimulationModeleSIS simulationModeleSIS = new SimulationModeleSIS(infectionProbability, recoveryProbability, graph.nodes().toList());
-            simulationModeleSIS.simulatePropagation(daysCount);
+            int daysCount = 2*30;
+            Simulation simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario1(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+            simulation.simulatePropagationSenario2(daysCount);
 
         }
 

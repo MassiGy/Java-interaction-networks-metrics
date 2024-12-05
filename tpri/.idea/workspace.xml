@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e1405b1-ca28-4229-952a-54d56a34428e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_sis_modal.png" beforeDir="false" afterPath="$PROJECT_DIR$/../propagation_plot_for_sis_modal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sis_simulation_results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../sis_simulation_results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_sis_modal.gnu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_sis_modal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sis_simulation_results.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/SimulationModeleSIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
