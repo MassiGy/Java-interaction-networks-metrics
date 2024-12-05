@@ -32,15 +32,52 @@ public class SimulationModeleSIS {
         List<Collection<Node>> result = new ArrayList<>(days);
 
         Collection<Node> infectedNodes;
+        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
 
         for (int i = 0; i < days; i++) {
             infectedNodes = new ArrayList<>(this.infectedNodes);        // create a snapshot
+
+
+            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+
+            // simulate the interaction ( prepare the state for the next day )
+            for(Node n: infectedNodes) {
+                interactWithNeighbors(n);
+            }
+
             result.add(infectedNodes);                                  // save snapshot
-            this.infectedNodes.forEach(n -> interactWithNeighbors(n)); // simulate the interaction ( prepare the state for the next day )
         }
 
         result.add(new ArrayList<>(this.infectedNodes));
+        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+
         return result;
+    }
+
+
+
+
+    /*
+    public List<Collection<Node>> propagation(int days) {
+        List<Collection<Node>> result = new ArrayList<>(days);
+        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
+        for (int i = 0; i < days; i++){
+            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            result.add(nextDay());
+        }
+
+        result.add(new ArrayList<>(this.infectedNodes));
+        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        return result;
+    }
+    */
+
+
+    private Collection<Node> nextDay() {
+        Collection<Node> infectedNodes = new ArrayList<>(this.infectedNodes);
+
+        infectedNodes.forEach(this::interactWithNeighbors);
+        return infectedNodes;
     }
 
 

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e1405b1-ca28-4229-952a-54d56a34428e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/SimulationModeleSIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/SimulationModeleSIS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/etudiant/gm213204/Documents/ri/m1-ri-tp/README.md"
+    "last_opened_file_path": "/home/etudiant/gm213204/Documents/graph/shortestpath/tp"
   }
 }]]></component>
   <component name="RunManager">
