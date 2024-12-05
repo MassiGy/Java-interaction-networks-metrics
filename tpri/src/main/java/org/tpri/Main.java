@@ -155,10 +155,15 @@ public class Main {
             double recoveryProbability = 1.0/15;
             int daysCount = 2*30;
             Simulation simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+
             simulation.simulatePropagationSenario1(daysCount);
             System.out.println("---------------------------------------");
             System.out.println("---------------------------------------");
             simulation.simulatePropagationSenario2(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+            simulation.simulatePropagationSenario3(daysCount);
+
 
         }
 

@@ -1,11 +1,9 @@
 package org.tpri;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import org.graphstream.algorithm.Toolkit;
+import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 
@@ -38,13 +36,13 @@ public class Simulation {
         List<Collection<Node>> result = new ArrayList<>(days);
 
         Collection<Node> infectedNodes;
-        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
+        //System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
 
         for (int i = 0; i < days; i++) {
             infectedNodes = new ArrayList<>(this.infectedNodes);        // create a snapshot
 
-            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
-
+            //System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            System.out.printf("%-15d %-20d\n", i + 1, infectedNodes.size());
             // simulate the interaction ( prepare the state for the next day )
             for(Node n: infectedNodes) {
                 interactWithNeighbors(n);
@@ -54,7 +52,8 @@ public class Simulation {
         }
 
         result.add(new ArrayList<>(this.infectedNodes));
-        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+       // System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        System.out.printf("%-15d %-20d\n", days, this.infectedNodes.size());
 
         return result;
     }
@@ -75,13 +74,14 @@ public class Simulation {
         List<Collection<Node>> result = new ArrayList<>(days);
 
         Collection<Node> infectedNodes;
-        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
+        //System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
 
         for (int i = 0; i < days; i++) {
             infectedNodes = new ArrayList<>(this.infectedNodes);        // create a snapshot
 
 
-            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+           // System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            System.out.printf("%-15d %-20d\n", i + 1, infectedNodes.size());
 
             // simulate the interaction ( prepare the state for the next day )
             for(Node n: infectedNodes) {
@@ -92,38 +92,68 @@ public class Simulation {
         }
 
         result.add(new ArrayList<>(this.infectedNodes));
-        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+      //  System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        System.out.printf("%-15d %-20d\n", days, this.infectedNodes.size());
 
         return result;
     }
 
+    public List<Collection<Node>> simulatePropagationSenario3(int days) {
 
+        // select 50% of our population as a random set into group0
+        List<Node> group0 = Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2));
+        // group1 will contain all the individuals that the members of group0
+        // will convince of getting immuned using the anti-virus
+        List<Node> group1 =  new ArrayList<>();
+        for (Node n : group0) {
+            Edge e = Toolkit.randomEdge(n);     // selectively immuned
+            if (e != null) {
+                Node u = e.getOpposite(n);
+                group1.add(u);
+            }
+        }
+        this.susceptibleNodes = new ArrayList<>(this.graph.nodes().toList());
+        System.out.println(this.susceptibleNodes.size());
+        for(Node n: group1)
+            this.susceptibleNodes.remove(n);      // remove the immuned group from our population
 
+        System.out.println(this.susceptibleNodes.size());
+        for(Node n: this.susceptibleNodes) {
+            n.setAttribute("infected", false);
+        }
 
-    /*
-    public List<Collection<Node>> propagation(int days) {
+        this.infectedNodes = new ArrayList<>();
+
+        infectionOf(this.susceptibleNodes.get(0));  // start with one infected individual
+
         List<Collection<Node>> result = new ArrayList<>(days);
-        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
-        for (int i = 0; i < days; i++){
-            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
-            result.add(nextDay());
+
+        Collection<Node> infectedNodes;
+        //System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
+
+        for (int i = 0; i < days; i++) {
+            infectedNodes = new ArrayList<>(this.infectedNodes);        // create a snapshot
+
+
+     //       System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            System.out.printf("%-15d %-20d\n", i + 1, infectedNodes.size());
+
+
+
+            // simulate the interaction ( prepare the state for the next day )
+            for(Node n: infectedNodes) {
+                interactWithNeighbors(n);
+            }
+
+            result.add(infectedNodes);                                  // save snapshot
         }
 
         result.add(new ArrayList<>(this.infectedNodes));
-        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        //System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        System.out.printf("%-15d %-20d\n", days, this.infectedNodes.size());
+
         return result;
     }
-
-
-    private Collection<Node> nextDay() {
-        Collection<Node> infectedNodes = new ArrayList<>(this.infectedNodes);
-
-        infectedNodes.forEach(this::interactWithNeighbors);
-        return infectedNodes;
-    }
-
-     */
-
 
 
     private void interactWithNeighbors(Node node) {
@@ -131,6 +161,10 @@ public class Simulation {
         Iterator<Node> neighborsIt = node.getBreadthFirstIterator();
         while (neighborsIt.hasNext()) {
             Node neighbor = neighborsIt.next();
+
+            if(neighbor.getAttribute("infected") == null)   // edge case
+                continue;
+
             if ((boolean) neighbor.getAttribute("infected") ==  false) {
                 if (Math.random() < this.infectionProbability) {
                     infectionOf(neighbor);
@@ -157,5 +191,31 @@ public class Simulation {
         node.setAttribute("infected", false);
         this.susceptibleNodes.add(node);
     }
+
+
+
+    /*
+    public List<Collection<Node>> propagation(int days) {
+        List<Collection<Node>> result = new ArrayList<>(days);
+        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
+        for (int i = 0; i < days; i++){
+            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            result.add(nextDay());
+        }
+
+        result.add(new ArrayList<>(this.infectedNodes));
+        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
+        return result;
+    }
+
+
+    private Collection<Node> nextDay() {
+        Collection<Node> infectedNodes = new ArrayList<>(this.infectedNodes);
+
+        infectedNodes.forEach(this::interactWithNeighbors);
+        return infectedNodes;
+    }
+
+     */
 
 }
