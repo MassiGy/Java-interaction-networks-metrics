@@ -1,0 +1,9 @@
+* For the epedimic threshold, check if the initial graph state does not matter,
+see if the fact that I've reduced the size of the graph to be more performant
+does not affect it.
+
+In other words create a graph with node count equal to 317082 and not 3170
+
+
+
+
