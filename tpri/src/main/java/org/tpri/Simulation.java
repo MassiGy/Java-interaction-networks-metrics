@@ -27,10 +27,10 @@ public class Simulation {
         for(Node n: this.susceptibleNodes) {
             n.setAttribute("infected", false);
         }
+        System.out.println("epidemicThreshold(this.susceptibleNodes): "+ epidemicThreshold(this.susceptibleNodes));
+
         this.infectedNodes = new ArrayList<>();
-
         infectionOf(susceptibleNodes.get(0));  // start with one infected individual
-
 
         // start simulation
         List<Collection<Node>> result = new ArrayList<>(days);
@@ -66,10 +66,10 @@ public class Simulation {
         for(Node n: this.susceptibleNodes) {
             n.setAttribute("infected", false);
         }
+        System.out.println("epidemicThreshold(this.susceptibleNodes): "+ epidemicThreshold(this.susceptibleNodes));
+
         this.infectedNodes = new ArrayList<>();
-
         infectionOf(this.susceptibleNodes.get(0));  // start with one infected individual
-
 
         List<Collection<Node>> result = new ArrayList<>(days);
 
@@ -112,18 +112,30 @@ public class Simulation {
                 group1.add(u);
             }
         }
+
+        //  TP2: question n°3
+        System.out.println("averageDegree(group0): "+averageDegree(group0));
+        System.out.println("averageDegree(group1): "+averageDegree(group1));
+
+
+
+
         this.susceptibleNodes = new ArrayList<>(this.graph.nodes().toList());
-        System.out.println(this.susceptibleNodes.size());
+
+
+        //System.out.println(this.susceptibleNodes.size());
         for(Node n: group1)
             this.susceptibleNodes.remove(n);      // remove the immuned group from our population
+        //System.out.println(this.susceptibleNodes.size());
 
-        System.out.println(this.susceptibleNodes.size());
         for(Node n: this.susceptibleNodes) {
             n.setAttribute("infected", false);
         }
+        System.out.println("epidemicThreshold(this.susceptibleNodes): "+ epidemicThreshold(this.susceptibleNodes));
+
+
 
         this.infectedNodes = new ArrayList<>();
-
         infectionOf(this.susceptibleNodes.get(0));  // start with one infected individual
 
         List<Collection<Node>> result = new ArrayList<>(days);
@@ -193,29 +205,24 @@ public class Simulation {
     }
 
 
-
-    /*
-    public List<Collection<Node>> propagation(int days) {
-        List<Collection<Node>> result = new ArrayList<>(days);
-        System.out.printf("%-15s %-25s %-20s\n", "Day Number", "Susceptible Nodes Count", "Infected Nodes Count");
-        for (int i = 0; i < days; i++){
-            System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
-            result.add(nextDay());
-        }
-
-        result.add(new ArrayList<>(this.infectedNodes));
-        System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
-        return result;
+    public static double averageDegree(Collection<Node> nodes) {
+        int sum = 0;
+        for (Node n : nodes)
+            sum += n.getDegree();
+        return (double) sum / nodes.size();
     }
 
 
-    private Collection<Node> nextDay() {
-        Collection<Node> infectedNodes = new ArrayList<>(this.infectedNodes);
-
-        infectedNodes.forEach(this::interactWithNeighbors);
-        return infectedNodes;
+    public static double averageDegreeExp2(Collection<Node> nodes) {
+        int sum = 0;
+        for (Node n : nodes)
+            sum += n.getDegree() * n.getDegree();
+        return (double) sum / nodes.size();
     }
 
-     */
+    public static double epidemicThreshold(Collection<Node> nodes) {
+        return averageDegree(nodes)/averageDegreeExp2(nodes);
+    }
+
 
 }

@@ -220,6 +220,26 @@ On peut conclure que l'immunisation fonctionne. Par ailleurs, l'immunisation sé
 
 
 
+3. le degré moyen des groupes 0 et 1:
+
+averageDegree(group0): 7.018879798615481
+averageDegree(group1): 8.046628859483302
+
+Explication de la différence:
+
+Groupe0 represente 50% de notre population (ces 50% sont choisis aléatroirement).
+Chaque noeud du groupe1 est un noeud qui est accessible par un autre noeud du groupe 0.
+
+Donc, il y a moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds du groupe 0 qui visent le même noeuds dans le groupe 1.
+
+Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs dans le groupe 1 que dans le groupe 0, ce qui justifie le fait que le degrès moyen est plus grand.
+
+
+4. Le seuil épidémique du réseau modifié pour chacune des deux stratégies d'immunisation et comparez avec le seuil épidémique du réseau initial:
+
+
+
+
 
     
     
