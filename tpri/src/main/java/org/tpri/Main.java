@@ -153,15 +153,15 @@ public class Main {
                 //- averageDegree: 6.62208890914917
 
             //Graph graph = randomGen(317082, 6.62208890914917);
-            Graph graph = randomGen(31708, 6.62208890914917);
+            Graph graph = randomGen(3170, 6.62208890914917);
             //
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
-            int daysCount = 30;
+            int daysCount = 2* 30;
             SimulationModeleSIS simulationModeleSIS = new SimulationModeleSIS(infectionProbability, recoveryProbability, graph.nodes().toList());
-            simulationModeleSIS.simulatePropagation(30);
+            simulationModeleSIS.simulatePropagation(daysCount);
 
         }
 
