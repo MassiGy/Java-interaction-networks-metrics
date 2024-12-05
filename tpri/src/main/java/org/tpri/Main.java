@@ -164,7 +164,6 @@ public class Main {
             System.out.println("---------------------------------------");
             simulation.simulatePropagationSenario3(daysCount);
 
-
         }
 
 

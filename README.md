@@ -214,7 +214,12 @@ Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moy
 
 2. Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
 
-    
-    
+![agregated_infection_simulations](./agregated_infection_simulations.png) 
+
+On peut conclure que l'immunisation fonctionne. Par ailleurs, l'immunisation séléctive est plus efficace que l'immunisation aléatoire.
+
+
+
+
     
     
