@@ -129,13 +129,31 @@ public class Main {
 
 
 
-        /*
+
         {
             Graph graph = graphFromFileSource("/home/etudiant/gm213204/Documents/ri/m1-ri-tp/com-dblp.ungraph.txt");
-            doAnalysis(graph);
+            //doAnalysis(graph);
+
+            double infectionProbability = 1.0/7;
+            double recoveryProbability = 1.0/15;
+            int daysCount = 30*2;
+            Simulation simulation;
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario1(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario2(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario3(daysCount);
         }
 
-         */
+
 
     /*
         {
@@ -170,7 +188,7 @@ public class Main {
     */
 
 
-
+/*
         {
 
             //In our graph we have:
@@ -201,7 +219,7 @@ public class Main {
             simulation.simulatePropagationSenario3(daysCount);
         }
 
-
+*/
 
     }
 }

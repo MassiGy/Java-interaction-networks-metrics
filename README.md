@@ -203,7 +203,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 - L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15. Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
 
-- le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0.12517451122735027
+- le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0.045984725428484516
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
@@ -234,31 +234,45 @@ Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs que 
 **Question n°4.** Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
 
 pour la simulation du scénario: 
-* n°1: 0.12488522364350205
-* n°2: 0.12517451122735027
-* n°3: 0.1330234665490158
+* n°1: 0.045984725428484516
+* n°2: 0.04686494599556906
+* n°3: 0.0935182683358852
 
 Le seuil épidémique des scénarios 1 et 2 sont approximativement égeaux à celui du réseau initial.
 Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive.
 
 
-**Question n°5.** Refaire les simulations avec le modèle d'attachement préférentiel de la même taille et le même degré moyen.
+**Question n°5.** Refaire les simulations avec le modèle aléatoire et d'attachement préférentiel de la même taille et le même degré moyen.
 
     
 Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
 
+***modèle aléatoire:***
+* n°1: 0.12488522364350205
+* n°2: 0.12517451122735027
+* n°3: 0.1330234665490158
+
+***modèle d'attachement préférentiel:***
 pour la simulation du scénario: 
 * n°1: 0.03370436442992548
 * n°2: 0.034848906388979875
 * n°3: 0.12000175496142217
 
 
-On voit que le seuil épidémique du scénario 3 est bien plus grand. C'est normal car là on a plus de 
+On voit que le seuil épidémique du scénario 3 est plus grand. C'est normal car là on a plus de 
 HUBs, et donc l'immunisation séléctive marche beaucoup mieux.
 
 
 
-![agregated_infection_simulations_question5](./agregated_infection_simulations_question5.png) 
+***modèle aléatoire:***
+
+![agregated_infection_simulations_question5_random](./agregated_infection_simulations_question5_random.png) 
+
+---
+
+***modèle d'attachement préférentiel:***
+
+![agregated_infection_simulations_question5_preferential](./agregated_infection_simulations_question5_preferential.png) 
 
 
 
