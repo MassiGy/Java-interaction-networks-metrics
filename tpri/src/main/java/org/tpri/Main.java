@@ -136,7 +136,7 @@ public class Main {
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
-            int daysCount = 1;
+            int daysCount = 60;
             Simulation simulation;
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
@@ -152,6 +152,8 @@ public class Main {
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
             simulation.simulatePropagationSenario3(daysCount);
         }
+
+
 
 
 

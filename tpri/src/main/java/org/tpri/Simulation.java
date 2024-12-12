@@ -18,6 +18,7 @@ public class Simulation {
         this.infectionProbability = infectionProbability;       // in our example it will be 1 per week (1/7)
         this.recoveryProbability = recoveryProbability;         // in our example it will be 1 per 15 days ( 2 times a month )
         this.graph = graph;                                     // this will be our network
+
     }
 
 
@@ -62,7 +63,7 @@ public class Simulation {
     public List<Collection<Node>> simulatePropagationSenario2(int days) {
 
         // only 50% of our population will be susceptible, since the others are immuned with the anti-virus
-        this.susceptibleNodes = Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2));
+       this.susceptibleNodes = Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2));
         for(Node n: this.susceptibleNodes) {
             n.setAttribute("infected", false);
         }
