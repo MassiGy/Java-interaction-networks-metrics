@@ -179,12 +179,12 @@ public class Main {
             //- EdgeCount: 1049866
             //- averageDegree: 6.62208890914917
 
-            Graph graph = randomPreferencielGraph(31708, 6.62208890914917);
+            Graph graph = randomPreferencielGraph(3170, 6.62208890914917);
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
-            int daysCount = 1;
+            int daysCount = 30 * 2;
             Simulation simulation;
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
