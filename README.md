@@ -84,11 +84,12 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
 
 - Voiçi la distribution des distances:
+
      ![distribution des distances](./distancesDistribution.png)
   
   On a utilisé le script gnuplot ci dessous:
-  ```gnuplot
   
+  ```gnuplot
   	set terminal png
 	set title "Distance distribution"
 	set xlabel 'd'
