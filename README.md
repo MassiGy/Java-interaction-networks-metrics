@@ -197,45 +197,67 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 
 1. 
 
-la probabilité de contaminer un collaborateur est de 1/7 ( un mail par semaine ).
+- la probabilité de contaminer un collaborateur est de 1/7 ( un mail par semaine ).
 
-L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15.
+- L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15. Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
 
-Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
+- le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0.12517451122735027
 
+**Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
-
-le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0,045786096. Car on a  <k> =  6.62208890914917, et <k^2> = 144,631.
-
-Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:
-
-- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering.
+- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Pas très grande différence et c'est bien car notre réseau est aussi aléatoire.
 
 
 2. Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
 
 ![agregated_infection_simulations](./agregated_infection_simulations.png) 
 
-On peut conclure que l'immunisation fonctionne. Par ailleurs, l'immunisation séléctive est plus efficace que l'immunisation aléatoire.
-
-
+On peut conclure que l'immunisation fonctionne.
 
 3. le degré moyen des groupes 0 et 1:
 
 averageDegree(group0): 7.018879798615481
 averageDegree(group1): 8.046628859483302
 
-Explication de la différence:
+**Explication de la différence:**
 
 Groupe0 represente 50% de notre population (ces 50% sont choisis aléatroirement).
 Chaque noeud du groupe1 est un noeud qui est accessible par un autre noeud du groupe 0.
 
-Donc, il y a moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds du groupe 0 qui visent le même noeuds dans le groupe 1.
+Donc, il y a forcemment moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds du groupe 0 qui visent le même noeuds dans le groupe 1.
 
-Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs dans le groupe 1 que dans le groupe 0, ce qui justifie le fait que le degrès moyen est plus grand.
+Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs que de noeuds normaux dans le groupe 1, ce qui justifie le fait que le degrès moyen est plus grand.
 
 
-4. Le seuil épidémique du réseau modifié pour chacune des deux stratégies d'immunisation et comparez avec le seuil épidémique du réseau initial:
+4. Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
+
+pour la simulation du scénario: 
+n°1: 0.12488522364350205
+n°2: 0.12517451122735027
+n°3: 0.1330234665490158
+
+Le seuil épidémique des scénarios 1 et 2 sont approximativement égeaux à celui du réseau initial.
+Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive.
+
+
+5. Refaire les simulations avec le modèle d'attachement préférentiel de la même taille et le même degré moyen.
+
+    
+Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
+
+pour la simulation du scénario: 
+n°1: 0.03370436442992548
+n°2: 0.034848906388979875
+n°3: 0.12000175496142217
+
+
+On voit que le seuil épidémique du scénario 3 est bien plus grand. C'est normal car là on a plus de 
+HUBs, et donc l'immunisation séléctive marche beaucoup mieux.
+
+
+
+![agregated_infection_simulations_question5](./agregated_infection_simulations_question5.png) 
+
 
 
 
