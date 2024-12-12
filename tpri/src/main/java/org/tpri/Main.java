@@ -147,24 +147,25 @@ public class Main {
                 //- averageDegree: 6.62208890914917
 
             //Graph graph = randomGen(317082, 6.62208890914917);
-            Graph graph = randomGen(3170, 6.62208890914917);
-            //
+            Graph graph = randomGen(317082, 6.62208890914917);
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
             int daysCount = 1;
-            Simulation simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            Simulation simulation;
 
-
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
             simulation.simulatePropagationSenario1(daysCount);
             System.out.println("---------------------------------------");
             System.out.println("---------------------------------------");
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
             simulation.simulatePropagationSenario2(daysCount);
             System.out.println("---------------------------------------");
             System.out.println("---------------------------------------");
 
-
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
             simulation.simulatePropagationSenario3(daysCount);
 
         }

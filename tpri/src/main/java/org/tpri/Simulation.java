@@ -102,6 +102,7 @@ public class Simulation {
 
         // select 50% of our population as a random set into group0
         List<Node> group0 = Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2));
+
         // group1 will contain all the individuals that the members of group0
         // will convince of getting immuned using the anti-virus
         List<Node> group1 =  new ArrayList<>();
@@ -147,7 +148,7 @@ public class Simulation {
             infectedNodes = new ArrayList<>(this.infectedNodes);        // create a snapshot
 
 
-     //       System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
+            //System.out.printf("%-15d %-25d %-20d\n", i + 1, this.susceptibleNodes.size(), infectedNodes.size());
             System.out.printf("%-15d %-20d\n", i + 1, infectedNodes.size());
 
 
@@ -161,6 +162,7 @@ public class Simulation {
         }
 
         result.add(new ArrayList<>(this.infectedNodes));
+
         //System.out.printf("%-15d %-25d %-20d\n", days, this.susceptibleNodes.size(), this.infectedNodes.size());
         System.out.printf("%-15d %-20d\n", days, this.infectedNodes.size());
 
