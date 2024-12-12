@@ -207,7 +207,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
-- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Pas très grande différence et c'est bien car notre réseau est aussi aléatoire.
+- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering.
 
 
 **Question n°2.** Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
@@ -218,8 +218,8 @@ On peut conclure que l'immunisation fonctionne.
 
 **Question n°3.** le degré moyen des groupes 0 et 1:
 
-* averageDegree(group0): 7.018879798615481
-* averageDegree(group1): 8.046628859483302
+* averageDegree(group0): 6.561000378453387
+* averageDegree(group1): 18.45390437744418
 
 **Explication de la différence:**
 

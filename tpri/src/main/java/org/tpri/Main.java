@@ -136,7 +136,7 @@ public class Main {
 
             double infectionProbability = 1.0/7;
             double recoveryProbability = 1.0/15;
-            int daysCount = 30*2;
+            int daysCount = 1;
             Simulation simulation;
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
