@@ -137,16 +137,14 @@ public class Main {
 
          */
 
-
+    /*
         {
+            //In our graph we have:
 
-                //In our graph we have:
+            //- NodeCount: 317080
+            //- EdgeCount: 1049866
+            //- averageDegree: 6.62208890914917
 
-                //- NodeCount: 317080
-                //- EdgeCount: 1049866
-                //- averageDegree: 6.62208890914917
-
-            //Graph graph = randomGen(317082, 6.62208890914917);
             Graph graph = randomGen(317082, 6.62208890914917);
             //doAnalysis(graph);
 
@@ -169,23 +167,39 @@ public class Main {
             simulation.simulatePropagationSenario3(daysCount);
 
         }
+    */
 
 
- /*
+
         {
 
-                //In our graph we have:
+            //In our graph we have:
 
-                //- NodeCount: 317080
-                //- EdgeCount: 1049866
-                //- averageDegree: 6.62208890914917
+            //- NodeCount: 317080
+            //- EdgeCount: 1049866
+            //- averageDegree: 6.62208890914917
 
-            Graph graph = randomPreferencielGraph(317082, 6.62208890914917);
-            doAnalysis(graph);
+            Graph graph = randomPreferencielGraph(31708, 6.62208890914917);
+            //doAnalysis(graph);
+
+            double infectionProbability = 1.0/7;
+            double recoveryProbability = 1.0/15;
+            int daysCount = 1;
+            Simulation simulation;
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario1(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario2(daysCount);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
+
+            simulation = new Simulation(infectionProbability, recoveryProbability, graph);
+            simulation.simulatePropagationSenario3(daysCount);
         }
-*/
-
-
 
 
 
