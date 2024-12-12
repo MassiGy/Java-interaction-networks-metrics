@@ -218,8 +218,8 @@ On peut conclure que l'immunisation fonctionne.
 
 **Question n°3.** le degré moyen des groupes 0 et 1:
 
-averageDegree(group0): 7.018879798615481
-averageDegree(group1): 8.046628859483302
+* averageDegree(group0): 7.018879798615481
+* averageDegree(group1): 8.046628859483302
 
 **Explication de la différence:**
 
@@ -234,9 +234,9 @@ Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs que 
 **Question n°4.** Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
 
 pour la simulation du scénario: 
-n°1: 0.12488522364350205
-n°2: 0.12517451122735027
-n°3: 0.1330234665490158
+* n°1: 0.12488522364350205
+* n°2: 0.12517451122735027
+* n°3: 0.1330234665490158
 
 Le seuil épidémique des scénarios 1 et 2 sont approximativement égeaux à celui du réseau initial.
 Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive.
@@ -248,9 +248,9 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
 
 pour la simulation du scénario: 
-n°1: 0.03370436442992548
-n°2: 0.034848906388979875
-n°3: 0.12000175496142217
+* n°1: 0.03370436442992548
+* n°2: 0.034848906388979875
+* n°3: 0.12000175496142217
 
 
 On voit que le seuil épidémique du scénario 3 est bien plus grand. C'est normal car là on a plus de 
