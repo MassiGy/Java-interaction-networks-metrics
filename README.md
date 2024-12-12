@@ -64,7 +64,7 @@ En traçant la distribution de degrés en échelle log-log on observe une ligne 
 
 On utilise ce [script](./plot_dd.gnu) pour tracer la distribution et estimer l'exposant de la loi de puissance.
 
-    ![distribution des degrés](./dd_dblp.png)
+![distribution des degrés](./dd_dblp.png)
 
 On a $`\gamma = 2.7 \pm 0.04`$
 
@@ -90,7 +90,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
   On a utilisé le script gnuplot ci dessous:
   
   ```gnuplot
-  	set terminal png
+
+	set terminal png
 	set title "Distance distribution"
 	set xlabel 'd'
 	set ylabel 'p(d)'
