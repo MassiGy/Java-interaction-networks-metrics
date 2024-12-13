@@ -212,7 +212,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 ![agregated_infection_simulations](./agregated_infection_simulations.png) 
 
-On peut conclure que l'immunisation fonctionne.
+On peut conclure que l'immunisation fonctionne. De plus, l'immunisation séléctive est bien meilleure !
 
 **Question n°3.** le degré moyen des groupes 0 et 1:
 
