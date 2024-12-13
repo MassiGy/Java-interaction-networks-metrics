@@ -68,7 +68,7 @@ public class Main {
         System.out.println("EdgeCount: " + graph.getEdgeCount());
         System.out.println("averageDegree: " + Toolkit.averageDegree(graph));
         System.out.println("averageClusteringCoefficient: " + Toolkit.averageClusteringCoefficient(graph));
-        System.out.println("averageClusteringCoefficient in a similar  graph that is random: " + Toolkit.averageDegree(graph) / graph.getNodeCount());
+        System.out.println("averageClusteringCoefficient in a similar but random graph: " + Toolkit.averageDegree(graph) / graph.getNodeCount());
 
         System.out.println("is the graph connected: " + Toolkit.isConnected(graph));
 
@@ -76,7 +76,7 @@ public class Main {
         int[] degreeDistribution = Toolkit.degreeDistribution(graph);
         for (int k = 0; k < degreeDistribution.length; k++) {
             if (degreeDistribution[k] != 0) {
-                System.out.printf(Locale.US, "%6d%20.8f%n", k, (double) degreeDistribution[k] / graph.getNodeCount());
+                System.out.printf(Locale.US, "%6d%3.8f%n", k, (double) degreeDistribution[k] / graph.getNodeCount());
             }
         }
 
@@ -116,7 +116,7 @@ public class Main {
             // a graph of n nodes where n = graph.getNodeCount(),
             // so we multiply nbNodes*graph.getNodeCount() since we calculated the distance between these nbNodes and all the nodes from the
             // rest of the graph
-            System.out.printf(Locale.US, "%6d%20.8f%n", i, (double) distancesHistogram[i] / (nbNodes * graph.getNodeCount()));
+            System.out.printf(Locale.US, "%6d%3.8f%n", i, (double) distancesHistogram[i] / (nbNodes * graph.getNodeCount()));
         }
 
 
@@ -131,7 +131,7 @@ public class Main {
 
 
         {
-            Graph graph = graphFromFileSource("C:\\Users\\a051954\\Downloads\\com-dblp.ungraph.txt");
+            Graph graph = graphFromFileSource("com-dblp.ungraph.txt");
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
@@ -140,17 +140,17 @@ public class Main {
             Simulation simulation;
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
-            simulation.simulatePropagationSenario1(daysCount);
+            simulation.simulatePropagationScenario1(daysCount);
             System.out.println("---------------------------------------");
             System.out.println("---------------------------------------");
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
-            simulation.simulatePropagationSenario2(daysCount);
+            simulation.simulatePropagationScenario2(daysCount);
             System.out.println("---------------------------------------");
             System.out.println("---------------------------------------");
 
             simulation = new Simulation(infectionProbability, recoveryProbability, graph);
-            simulation.simulatePropagationSenario3(daysCount);
+            simulation.simulatePropagationScenario3(daysCount);
         }
 
 
@@ -165,7 +165,7 @@ public class Main {
             //- EdgeCount: 1049866
             //- averageDegree: 6.62208890914917
 
-            Graph graph = randomGen(317082, 6.62208890914917);
+            Graph graph = randomGen(317080, 6.62208890914917);
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
@@ -199,7 +199,7 @@ public class Main {
             //- EdgeCount: 1049866
             //- averageDegree: 6.62208890914917
 
-            Graph graph = randomPreferencielGraph(3170, 6.62208890914917);
+            Graph graph = randomPreferencielGraph(317080, 6.62208890914917);
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;

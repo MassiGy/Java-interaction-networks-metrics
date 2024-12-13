@@ -21,10 +21,9 @@ public class Simulation {
         this.graph = graph;                                     // this will be our network
     }
 
-    public void simulatePropagationSenario1(int days) {
+    public void simulatePropagationScenario1(int days) {
         int nodeCount = graph.getNodeCount();
 
-        // Setup our simulation for the the first senario
         this.susceptibleNodes = new HashSet<>(this.graph.nodes().toList());  // all nodes are susceptible initially
         System.out.println("epidemicThreshold(this.susceptibleNodes): " + epidemicThreshold(this.susceptibleNodes));
 
@@ -42,10 +41,10 @@ public class Simulation {
         }
     }
 
-    public void simulatePropagationSenario2(int days) {
+    public void simulatePropagationScenario2(int days) {
         int nodeCount = graph.getNodeCount();
 
-        // only 50% of our population will be susceptible, since the others are immuned with the anti-virus
+        // only 50% of our population will be susceptible, since the others are permanently immune with the antivirus
         this.susceptibleNodes = new HashSet<>(Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2)));
         System.out.println("epidemicThreshold(this.susceptibleNodes): " + epidemicThreshold(this.susceptibleNodes));
 
@@ -62,17 +61,17 @@ public class Simulation {
         }
     }
 
-    public void simulatePropagationSenario3(int days) {
+    public void simulatePropagationScenario3(int days) {
         int nodeCount = graph.getNodeCount();
 
         // select 50% of our population as a random set into group0
         List<Node> group0 = Toolkit.randomNodeSet(graph, (graph.getNodeCount() / 2));
 
         // group1 will contain all the individuals that the members of group0
-        // will convince of getting immuned using the anti-virus
+        // have convinced of staying permanently immune using the antivirus
         List<Node> group1 = new ArrayList<>();
         for (Node n : group0) {
-            Edge e = Toolkit.randomEdge(n);     // selectively immuned
+            Edge e = Toolkit.randomEdge(n);     // selectively immune
             if (e != null) {
                 Node u = e.getOpposite(n);
                 group1.add(u);
@@ -84,7 +83,7 @@ public class Simulation {
         System.out.println("averageDegree(group1): " + averageDegree(group1));
 
         this.susceptibleNodes = new HashSet<>(this.graph.nodes().toList());
-        this.susceptibleNodes.removeAll(group1);
+        this.susceptibleNodes.removeAll(group1);    // remove all the immune individuals
         System.out.println("epidemicThreshold(this.susceptibleNodes): " + epidemicThreshold(this.susceptibleNodes));
 
         this.infectedNodes = new HashSet<>();
@@ -130,6 +129,8 @@ public class Simulation {
     }
 
     public static double averageDegree(Collection<Node> nodes) {
+        // for <k>
+        // same as Toolkit.averageDegree()
         int sum = 0;
         for (Node n : nodes)
             sum += n.getDegree();
@@ -137,6 +138,7 @@ public class Simulation {
     }
 
     public static double averageDegreeExp2(Collection<Node> nodes) {
+        // for <k²>
         int sum = 0;
         for (Node n : nodes)
             sum += n.getDegree() * n.getDegree();
@@ -144,7 +146,7 @@ public class Simulation {
     }
 
     public static double epidemicThreshold(Collection<Node> nodes) {
-        return averageDegree(nodes) / averageDegreeExp2(nodes);
+        return  (double) averageDegree(nodes) / averageDegreeExp2(nodes);
     }
 
 }
