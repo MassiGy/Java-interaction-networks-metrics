@@ -72,13 +72,14 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 - Avec notre échantillonnage on a une distance moyenne de 6.796943058534124.
 - Donc, l'hypothèse des six degrés de séparation se confirme.
-- Pour que le réseau soit un réseau type petit monde, on doit avoir: davg ~=  lnN/lnM
-  	ou davg est la distance moyenne.
-  	et N est le nombre de noeuds.
-  	et M est le degres moyen.
+- Pour que le réseau soit un réseau type petit monde, on doit avoir: 
+    
+  * davg ~=  lnN/lnM ou davg est la distance moyenne.
+  * et N est le nombre de noeuds.
+  * et M est le degres moyen.
+  
   Dans notre cas on a lnN/lnM = 6,700611819.
   et davg = 6.796943058534124.
-  
   Donc, notre réseau est bien un réseau type petit monde.
   
 - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
