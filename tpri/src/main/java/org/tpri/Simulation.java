@@ -21,24 +21,6 @@ public class Simulation {
         this.graph = graph;                                     // this will be our network
     }
 
-    public static double averageDegree(Collection<Node> nodes) {
-        int sum = 0;
-        for (Node n : nodes)
-            sum += n.getDegree();
-        return (double) sum / nodes.size();
-    }
-
-    public static double averageDegreeExp2(Collection<Node> nodes) {
-        int sum = 0;
-        for (Node n : nodes)
-            sum += n.getDegree() * n.getDegree();
-        return (double) sum / nodes.size();
-    }
-
-    public static double epidemicThreshold(Collection<Node> nodes) {
-        return averageDegree(nodes) / averageDegreeExp2(nodes);
-    }
-
     public void simulatePropagationSenario1(int days) {
         int nodeCount = graph.getNodeCount();
 
@@ -146,4 +128,23 @@ public class Simulation {
         this.infectedNodes.remove(node);
         this.susceptibleNodes.add(node);
     }
+
+    public static double averageDegree(Collection<Node> nodes) {
+        int sum = 0;
+        for (Node n : nodes)
+            sum += n.getDegree();
+        return (double) sum / nodes.size();
+    }
+
+    public static double averageDegreeExp2(Collection<Node> nodes) {
+        int sum = 0;
+        for (Node n : nodes)
+            sum += n.getDegree() * n.getDegree();
+        return (double) sum / nodes.size();
+    }
+
+    public static double epidemicThreshold(Collection<Node> nodes) {
+        return averageDegree(nodes) / averageDegreeExp2(nodes);
+    }
+
 }
