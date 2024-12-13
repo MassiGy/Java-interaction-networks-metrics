@@ -205,7 +205,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
-- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(< k >+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering ( formation des HUBs diffère dans les deux réseaux).
+- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(< k >+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering ( la formation des HUBs diffère dans les deux réseaux).
 
 
 **Question n°2.** Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
@@ -236,7 +236,7 @@ pour la simulation du scénario:
 * n°3: 0.0935182683358852 
 
 Le seuil épidémique du scénario 2 est approximativement égal à celui du réseau initial.
-Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive.
+Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive, ce qui nous a permi de supprimer beaucoup de HUBs dans le réseau.
 
 
 **Question n°5.** Refaire les simulations avec le modèle aléatoire et d'attachement préférentiel de la même taille et le même degré moyen.
