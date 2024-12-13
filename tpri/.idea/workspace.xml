@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e1405b1-ca28-4229-952a-54d56a34428e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.gnu" beforeDir="false" afterPath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.gnu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_random.gnu" beforeDir="false" afterPath="$PROJECT_DIR$/../agregated_infection_simulations_random.gnu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_random.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fit.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario1.gnu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario2.gnu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario3.gnu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scenario1_simulation_results.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scenario2_simulation_results.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scenario3_simulation_results.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario1_question5_preferential.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario1_question5_random.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario2_question5_preferential.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario2_question5_random.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario3_question5_preferential.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../simulation_scenario3_question5_random.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../todos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
