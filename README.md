@@ -140,7 +140,6 @@ On a $`\gamma = 2.7 \pm 0.04`$
 - EdgeCount: 1108857
 - averageDegree: 6.99395751953125
 - averageClusteringCoefficient: 2.5155159000996033E-5
-- averageClusteringCoefficient in a similar  graph that is random: 2.2056695321616104E-5
 - avgDistance: 6.728634727946078
  
 
@@ -162,7 +161,6 @@ On a $`\gamma = 2.7 \pm 0.04`$
 - EdgeCount: 1269742
 - averageDegree: 8.008868217468262
 - averageClusteringCoefficient: 4.300926930010513E-4
-- averageClusteringCoefficient in a similar  graph that is random: 2.5257875570726564E-5
 - avgDistance: 4.877203611661264    
     
  
@@ -207,7 +205,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
-- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering.
+- Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(<k>+1) = 0,13119763. Cette différence entre les seuils épidémique est dûe à la divergence du degré de clustering ( formation des HUBs diffère dans les deux réseaux).
 
 
 **Question n°2.** Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.

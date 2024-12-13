@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e1405b1-ca28-4229-952a-54d56a34428e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.gnu" beforeDir="false" afterPath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.gnu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_preferential.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_random.gnu" beforeDir="false" afterPath="$PROJECT_DIR$/../agregated_infection_simulations_random.gnu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agregated_infection_simulations_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fit.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario1.gnu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario2.gnu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../plot_simulation_for_scenario3.gnu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../propagation_plot_for_scenario3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scenario1_simulation_results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scenario2_simulation_results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scenario3_simulation_results.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario1_question5_preferential.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario1_question5_random.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario2_question5_preferential.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario2_question5_random.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario3_question5_preferential.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simulation_scenario3_question5_random.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../todos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../todos.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tpri/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tpri/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +54,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/etudiant/gm213204/Documents/ri/maxflow&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/a051954/Documents/formation/coding/m1-ri-tp/tpri",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.tpri.Main" />

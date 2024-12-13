@@ -131,7 +131,7 @@ public class Main {
 
 
         {
-            Graph graph = graphFromFileSource("/home/etudiant/gm213204/Documents/ri/m1-ri-tp/com-dblp.ungraph.txt");
+            Graph graph = graphFromFileSource("C:\\Users\\a051954\\Downloads\\com-dblp.ungraph.txt");
             //doAnalysis(graph);
 
             double infectionProbability = 1.0/7;
