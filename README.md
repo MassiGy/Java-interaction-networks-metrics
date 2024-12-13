@@ -224,19 +224,18 @@ On peut conclure que l'immunisation fonctionne.
 Groupe0 represente 50% de notre population (ces 50% sont choisis aléatroirement).
 Chaque noeud du groupe1 est un noeud qui est accessible par un autre noeud du groupe 0.
 
-Donc, il y a forcemment moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds du groupe 0 qui visent le même noeuds dans le groupe 1.
+Donc, il y a forcemment moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds (ou plus) du groupe 0 qui visent le même noeuds dans le groupe 1.
 
-Autrement dit, suivant notre constructions des groupes, il y a plus de HUBs que de noeuds normaux dans le groupe 1, ce qui justifie le fait que le degrès moyen est plus grand.
+Autrement dit, il y a plus de HUBs que de noeuds normaux dans le groupe 1, ce qui justifie le fait que le degrès moyen est plus grand.
 
 
 **Question n°4.** Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
 
 pour la simulation du scénario: 
-* n°1: 0.045984725428484516
 * n°2: 0.04686494599556906
 * n°3: 0.0935182683358852 
 
-Le seuil épidémique des scénarios 1 et 2 sont approximativement égeaux à celui du réseau initial.
+Le seuil épidémique du scénario 2 est approximativement égal à celui du réseau initial.
 Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive.
 
 
