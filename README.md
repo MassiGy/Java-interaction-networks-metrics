@@ -201,7 +201,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 - L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15. Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
 
-- le seuil épidémique du réseau est : lambdaC =  <k> / < k*k > = 0.045984725428484516
+- le seuil épidémique du réseau est : lambdaC =  < k > / < k*k > = 0.045984725428484516
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
