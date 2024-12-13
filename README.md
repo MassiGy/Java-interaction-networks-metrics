@@ -31,12 +31,14 @@ Du coup, le coefficient de clustering sera la moyenne des degrès sur le nombre 
 
 - Oui le graph est connexe.
 - Un réseau aléatoire de la même taille et degré moyen est connexe ssi M/LogN > 1.
-    ou M = la moyenne des degrès des noeuds.
-    et N = le nombre de noeuds.
+    * ou M = la moyenne des degrès des noeuds.
+    * et N = le nombre de noeuds.
 
-  Dans notre cas on a M = 6.62208890914917
-  et logN = log(317080) = 12,666909387
-  Donc M/logN = 0,522786475
+  Dans notre cas on a M = 6.62208890914917.
+
+  et logN = log(317080) = 12,666909387.
+
+  Donc M/logN = 0,522786475.
   
   Donc un réseau aléatoire de la même taille et degré moyen est non connexe.
 
@@ -80,6 +82,7 @@ On a $`\gamma = 2.7 \pm 0.04`$
   
   Dans notre cas on a lnN/lnM = 6,700611819.
   et davg = 6.796943058534124.
+
   Donc, notre réseau est bien un réseau type petit monde.
   
 - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
