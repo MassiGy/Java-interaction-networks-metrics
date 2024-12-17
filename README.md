@@ -186,7 +186,10 @@ Pour les résultats, on est dans la même ordre de grandeur.
     ![distribution des distances](./distancesDistribution.preferentiel.png)
     
 
-Par ailleurs, on voit que le coefficient de clustering du réseau préférentiel est plus grand que celui du réseau aléatoire. Ce qui confirme l'aspet théorique vu en cours.    
+Par ailleurs, on voit que le coefficient de clustering du réseau préférentiel est plus grand que celui du réseau aléatoire. Ce qui confirme l'aspect théorique vu en cours.    
+
+<br/>
+<br/>
 
 
 ***Aggrégation des distributions:***    
