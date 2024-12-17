@@ -257,9 +257,35 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 ![agregated_infection_simulations_preferential](./agregated_infection_simulations_preferential.png) 
 
 
+---
+
+
+**Courbes supplimentaires:**
+
+
+***Scenario/Simulation 1 dans toutes les configurations***
+
+![Scenario/Simulation 1 dans toutes les configurations](./simulation1_in_all_network_config.png) 
+
+---
 
 
 
+***Scenario/Simulation 2 dans toutes les configurations***
 
-    
-    
+
+![Scenario/Simulation 2 dans toutes les configurations](./simulation2_in_all_network_config.png) 
+
+
+---
+
+
+
+***Scenario/Simulation 3 dans toutes les configurations***
+
+![Scenario/Simulation 3 dans toutes les configurations](./simulation3_in_all_network_config.png) 
+
+---
+
+
+   
