@@ -140,12 +140,18 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 ***Graph aléa:***
 
+*Résultats pratiques:*
+
 - NodeCount: 317090
 - EdgeCount: 1108857
 - averageDegree: 6.99395751953125
 - averageClusteringCoefficient: 2.5155159000996033E-5
 - avgDistance: 6.728634727946078
  
+*Résultats théoriques:* 
+- averageClusteringCoefficient = < k > / N = 0,000022057 ~ 2.2057E-5.
+
+Pour les résultats, on est dans la même ordre de grandeur.
 
 - Voiçi la distribution des degrés: 
     
@@ -179,7 +185,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
     
     ![distribution des distances](./distancesDistribution.preferentiel.png)
     
-    
+
+Par ailleurs, on voit que le coefficient de clustering du réseau préférentiel est plus grand que celui du réseau aléatoire. Ce qui confirme l'aspet théorique vu en cours.    
 
 
 ***Aggrégation des distributions:***    
