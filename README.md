@@ -319,13 +319,13 @@ Dans ce graphique, on voit que le réseau préférentiel a toujours le boom d'in
 
 Toutefois, cette fois-ci, le réseau initial est en avance par rapport au réseau aléatoire. Cela confirme la note précedente.
 
-<blockquoate>
+<blockquote>
 
 NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire, car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
 
 C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
 
-<blockquoate/>
+<blockquote/>
 
 
 ---
@@ -342,7 +342,7 @@ Pour ce qui concerne l'immunisation séléctive, on va avoir un grand frien pour
 
 Et étant donné que la distribution du degrès moyen est uniforme dans le réseau aléatoire, on va avoir le boom le plus tôt.
 
-Ce qui est intéressant dans ce graphique c'est le cas du réseau initial. Je pense que le fait d'avoir supprimer les HUBs ( groupe 1), ajouté à cela le fait que le degrès moyen n'est pas aussi uniformement distribué que dans le réseau aléatoire, cela a cassé le réseau en plusieurs composantes connexes et donc la propagation capturée/ par le graphique est limitée a une des composantes! 
+Ce qui est intéressant dans ce graphique c'est le cas du réseau initial. Je pense que le fait d'avoir supprimer les HUBs ( groupe 1), ajouté à cela le fait que le degrès moyen n'est pas aussi uniformement distribué que dans le réseau aléatoire, cela a cassé le réseau en plusieurs composantes connexes et donc la propagation capturée par le graphique est limitée a une des composantes! 
 
 Cela justifiera les valeurs qui sont assez faibles. (sur l'axe des ordonnées)
 
