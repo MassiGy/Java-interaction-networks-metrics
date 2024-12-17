@@ -260,11 +260,28 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 
 ![agregated_infection_simulations_random](./agregated_infection_simulations_random.png) 
 
+
+On voit que l'imunistaion fonctionne, vu que le scénario 1 présente une évolution des infection plus plus importante.
+
+Par ailleurs, on voit que le scénario 3 présente une évolution des infections plus importante car le scénario 3 vise à faire de l'immunisation séléctive en suppriment les HUBs ( group1 ) mais étant donné que c'est un réseau aléatoire, la probabilité qu'un noeud soit un HUB est la même pour tous. Autrement dit, le degrès moyen est uniformement distribué.
+
+Donc, le scénario 2 fait mieux car là au moins on a que 50% de la population, tout en gardant la même distribution uniforme du même degrès moyen.
+
 ---
 
 ***modèle d'attachement préférentiel:***
 
 ![agregated_infection_simulations_preferential](./agregated_infection_simulations_preferential.png) 
+
+
+On voit que la le boom d'infection se fait bien plus tôt, et c'est logique étant donné que le réseau continent plus de HUBs (scénario 1).
+
+Pour ce qui est du scénario 2, on voit que le fait qu'on réduit de 50% la population freine la propagation des infections.
+
+Le plus intéressant est que l'immunisation séléctive ralenti bien plus le boom des infections mais après le scénario 3 rattrape le scénario 2 car il y a des HUBs dans la population étudier.
+
+Autrement dit, le fait de supprimer le groupe 1 dans le scénario 3 a fait que réduire le nombre de HUBs mais il en reste encore vu la nature du réseau.
+
 
 
 ---
@@ -277,6 +294,16 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 
 ![Scenario/Simulation 1 dans toutes les configurations](./simulation1_in_all_network_config.png) 
 
+
+Dans ce graphique, on voit que le boom se fait plus tôt dans un réseau préférentiel et c'est logique, car il y a plus de HUBs.
+
+Par ailleurs, on voit que le réseau aléatoire et le réseau initial présente la même évoultion des infections.
+
+NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire, car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
+
+C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
+
+
 ---
 
 
@@ -287,6 +314,20 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 ![Scenario/Simulation 2 dans toutes les configurations](./simulation2_in_all_network_config.png) 
 
 
+Dans ce graphique, on voit que le réseau préférentiel a toujours le boom d'infections le plus tôt. Car on a autant de HUBs dans les 50% supprimés que ceux qui restent.
+
+Toutefois, cette fois-ci, le réseau initial est en avance par rapport au réseau aléatoire. Cela confirme la note précedente.
+
+```
+
+NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire, car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
+
+C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
+
+```
+
+
+
 ---
 
 
@@ -295,7 +336,24 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 
 ![Scenario/Simulation 3 dans toutes les configurations](./simulation3_in_all_network_config.png) 
 
+
+
+Pour ce qui concerne l'immunisation séléctive, on va avoir un grand frien pour le réseau préférentiel étant donné qu'on a supprimé beaucoup de HUBs dans le groupe 1.
+
+Et étant donné que la distribution du degrès moyen est uniforme dans le réseau aléatoire, on va avoir le boom le plus tôt.
+
+Ce qui est intéressant dans ce graphique c'est le cas du réseau initial. Je pense que le fait d'avoir supprimer les HUBs ( groupe 1), ajouté à cela le fait que le degrès moyen n'est pas aussi uniformement distribué que dans le réseau aléatoire, cela a cassé le réseau en plusieurs composantes connexes et donc la propagation capturé par le graphique est limitée a une des composantes! 
+
+Cela justifiera les valeurs (sur l'axe des ordonnées) qui sont assez faibles.
+
+
+
+
+
+
 ---
+
+
 
 
    
