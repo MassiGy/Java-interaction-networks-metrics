@@ -1,3 +1,0 @@
-* TP1- question 6:
-> Les résultats expérimentaux correspondent-ils aux prédictions théoriques ? Comparez avec le réseau de collaboration. Que peut-on conclure ?
-
