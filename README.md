@@ -260,7 +260,7 @@ Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation s
 ---
 
 
-**Courbes supplimentaires:**
+## Courbes supplimentaires:
 
 
 ***Scenario/Simulation 1 dans toutes les configurations***
