@@ -325,7 +325,7 @@ NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau ini
 
 C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
 
-<blockquote/>
+</blockquote>
 
 
 ---
