@@ -3,9 +3,13 @@
 
 ### Prélude
 
-    Nous allons analyser un réseau de collaboration scientifique en informatique. Le réseau est extrait de DBLP et disponible sur [SNAP](https://snap.stanford.edu/data/com-DBLP.html).
+    Nous allons analyser un réseau de collaboration scientifique en informatique. 
+    Le réseau est extrait de DBLP et disponible sur [SNAP](https://snap.stanford.edu/data/com-DBLP.html).
 
-    GraphStream permet de mesurer de nombreuses caractéristiques d'un réseau. La plupart de ces mesures sont implantées comme des méthodes statiques dans la classe [`Toolkit`](https://data.graphstream-project.org/api/gs-algo/current/org/graphstream/algorithm/Toolkit.html). Elles vous seront très utiles par la suite.
+    GraphStream permet de mesurer de nombreuses caractéristiques d'un réseau. 
+    La plupart de ces mesures sont implantées comme des méthodes statiques dans la classe [`Toolkit`]
+    (https://data.graphstream-project.org/api/gs-algo/current/org/graphstream/algorithm/Toolkit.html). 
+    Elles vous seront très utiles par la suite.
 
 **Question n°1.** Commencez par télécharger les données et les lire avec GraphStream. GraphStream sait lire ce format. Voir [`FileSourceEdge`](https://data.graphstream-project.org/api/gs-core/current/org/graphstream/stream/file/FileSourceEdge.html) et ce [tutoriel](http://graphstream-project.org/doc/Tutorials/Reading-files-using-FileSource/). Vous pouvez essayer de visualiser le graphe mais pour cette taille ça sera très lent et très peu parlant.
 
@@ -46,7 +50,8 @@ b) Quel sera le coefficient de clustering pour un réseau aléatoire de la même
       
       Donc un réseau aléatoire de la même taille et degré moyen est non connexe.
 
-    - Pour qu'un graph aléatoire avec la même taille soit connexe, le degrès moyen M doit être strictement plus grand que 12,666909387
+    - Pour qu'un graph aléatoire avec la même taille soit connexe, 
+    le degrès moyen M doit être strictement plus grand que 12,666909387
 
 
 **Question n°4.** Calculez la distribution des degrés et tracez-la avec `gnuplot` (ou avec votre outil préféré) d'abord en échelle linéaire, ensuite en échelle log-log. Est-ce qu'on observe une ligne droite en log-log ? Que cela nous indique ? Tracez la distribution de Poisson avec la même moyenne pour comparaison. Utilisez la commande `fit` de `gnuplot` pour trouver les coefficients de la loi de puissance et tracez-la.
@@ -89,7 +94,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
       Donc, notre réseau est bien un réseau type petit monde.
       
-    - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: davg ~=  lnN/lnM ~= 6,700611819.
+    - La distance moyenne dans un réseau aléatoire avec les mêmes caractéristiques sera: 
+    davg ~=  lnN/lnM ~= 6,700611819.
 
     - Voiçi la distribution des distances:
 
@@ -136,7 +142,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
       
       ```
       
-    - On voit que la distribution des distances est en forme de cloche. On peut supposer que la loi derrière est une de poisson/binomiale.
+    - On voit que la distribution des distances est en forme de cloche. 
+    On peut supposer que la loi derrière est une de poisson/binomiale.
       
 	
 **Question n°6.** Utilisez les générateurs de GraphStream pour générer un réseau aléatoire et un réseau avec la méthode d'attachement préférentiel (Barabasi-Albert) qui ont la même taille et le même degré moyen. Refaites les mesures des questions précédentes pour ces deux réseaux. Les résultats expérimentaux correspondent-ils aux prédictions théoriques ? Comparez avec le réseau de collaboration. Que peut-on conclure ?
@@ -190,7 +197,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
   ![distribution des distances](./plots_visuals/distancesDistribution.preferentiel.png)
     
 
-    Par ailleurs, on voit que le coefficient de clustering du réseau préférentiel est plus grand que celui du réseau aléatoire. Ce qui confirme l'aspect théorique vu en cours.    
+    Par ailleurs, on voit que le coefficient de clustering du réseau préférentiel est plus grand que 
+    celui du réseau aléatoire. Ce qui confirme l'aspect théorique vu en cours.    
 
 <br/>
 <br/>
@@ -220,13 +228,16 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
     - la probabilité de contaminer un collaborateur est de 1/7 ( un mail par semaine ).
 
-    - L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15. Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
+    - L'anti-virus est mis-à-jour 2/30 (deux fois par mois), ce qui donne 1/15. 
+    Donc, le taux de propagation est (1/7)/(1/15) = 2,142857143.
 
     - le seuil épidémique du réseau est : lambdaC =  < k > / < k*k > = 0.045984725428484516
 
 **Comparaison avec le seuil théorique d'un réseau aléatoire du même degré moyen:**
 
-    - Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(< k >+1) = 0,13119763. Il y a une différence car le degré de clustering est aussi différent. ( la formation des HUBs diffère dans les deux réseaux).
+    - Le seuil épidémique d'un réseau aléatoire au même degré moyen serait lambdaC = 1/(< k >+1) = 0,13119763.
+     Il y a une différence car le degré de clustering est aussi différent. 
+     ( la formation des HUBs diffère dans les deux réseaux).
 
 
 **Question n°2.** Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
@@ -245,9 +256,11 @@ On a $`\gamma = 2.7 \pm 0.04`$
     Groupe0 represente 50% de notre population (ces 50% sont choisis aléatroirement).
     Chaque noeud du groupe1 est un noeud qui est accessible par un autre noeud du groupe 0.
 
-    Donc, il y a forcemment moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, on peut avoir deux noeuds (ou plus) du groupe 0 qui visent le même noeuds dans le groupe 1.
+    Donc, il y a forcemment moins de noeuds dans le groupe 1. Car, suivant notre construction des groupes, 
+    on peut avoir deux noeuds (ou plus) du groupe 0 qui visent le même noeuds dans le groupe 1.
 
-    Autrement dit, il y a plus de HUBs que de noeuds normaux dans le groupe 1, ce qui justifie le fait que le degrès moyen est plus grand.
+    Autrement dit, il y a plus de HUBs que de noeuds normaux dans le groupe 1, 
+    ce qui justifie le fait que le degrès moyen est plus grand.
 
 
 **Question n°4.** Le seuil épidémique du réseau modifié pour chacune des stratégies d'immunisation:
@@ -257,7 +270,8 @@ On a $`\gamma = 2.7 \pm 0.04`$
     * n°3: 0.0935182683358852 
 
     Le seuil épidémique du scénario 2 est approximativement égal à celui du réseau initial.
-    Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive, ce qui nous a permi de supprimer beaucoup de HUBs dans le réseau.
+    Le seuil épidémique du scénario 3 est plus grand car c'est une immunisation séléctive,
+    ce qui nous a permi de supprimer beaucoup de HUBs dans le réseau.
 
 
 **Question n°5.** Refaire les simulations avec le modèle aléatoire et d'attachement préférentiel de la même taille et le même degré moyen.
@@ -268,11 +282,16 @@ On a $`\gamma = 2.7 \pm 0.04`$
 ![agregated_infection_simulations_random](./plots_visuals/agregated_infection_simulations_random.png) 
 
 
-    On voit que l'imunistaion fonctionne, vu que le scénario 1 présente une évolution des infection plus plus importante.
+    On voit que l'imunistaion fonctionne, vu que le scénario 1 présente une évolution des infection
+    plus plus importante.
 
-    Par ailleurs, on voit que le scénario 3 présente une évolution des infections plus importante car le scénario 3 vise à faire de l'immunisation séléctive en suppriment les HUBs ( group1 ). Mais étant donné que c'est un réseau aléatoire, la probabilité qu'un noeud soit un HUB est la même pour tous. Autrement dit, le degrès moyen est uniformement distribué.
+    Par ailleurs, on voit que le scénario 3 présente une évolution des infections plus importante 
+    car le scénario 3 vise à faire de l'immunisation séléctive en suppriment les HUBs ( group1 ). 
+    Mais étant donné que c'est un réseau aléatoire, la probabilité qu'un noeud soit un HUB est la
+    même pour tous. Autrement dit, le degrès moyen est uniformement distribué.
 
-    Donc, le scénario 2 fait mieux car là au moins on a que 50% de la population, tout en gardant la même distribution uniforme du même degrès moyen.
+    Donc, le scénario 2 fait mieux car là au moins on a que 50% de la population, 
+    tout en gardant la même distribution uniforme du même degrès moyen.
 
 ---
 
@@ -281,13 +300,17 @@ On a $`\gamma = 2.7 \pm 0.04`$
 ![agregated_infection_simulations_preferential](./plots_visuals/agregated_infection_simulations_preferential.png) 
 
 
-    On voit que la le boom d'infection se fait bien plus tôt, et c'est logique étant donné que le réseau continent plus de HUBs (scénario 1).
+    On voit que la le boom d'infection se fait bien plus tôt, et c'est logique étant donné que le
+     réseau continent plus de HUBs (scénario 1).
 
-    Pour ce qui est du scénario 2, on voit que le fait qu'on réduit de 50% la population freine la propagation des infections.
+    Pour ce qui est du scénario 2, on voit que le fait qu'on réduit de 50% la population freine 
+    la propagation des infections.
 
-    Le plus intéressant est que l'immunisation séléctive ralenti bien plus le boom des infections mais après le scénario 3 rattrape le scénario 2, car il y a des HUBs dans la population étudiée.
+    Le plus intéressant est que l'immunisation séléctive ralenti bien plus le boom des infections mais 
+    après le scénario 3 rattrape le scénario 2, car il y a des HUBs dans la population étudiée.
 
-    Autrement dit, le fait de supprimer le groupe 1 dans le scénario 3 a fait que réduire le nombre de HUBs mais il en reste encore vu la nature du réseau.
+    Autrement dit, le fait de supprimer le groupe 1 dans le scénario 3 a fait que réduire le nombre 
+    de HUBs mais il en reste encore vu la nature du réseau.
 
 
 
@@ -302,12 +325,17 @@ On a $`\gamma = 2.7 \pm 0.04`$
 ![Scenario/Simulation 1 dans toutes les configurations](./plots_visuals/simulation1_in_all_network_config.png) 
 
 
-    Dans ce graphique, on voit que le boom se fait plus tôt dans un réseau préférentiel et c'est logique, car il y a plus de HUBs.
+    Dans ce graphique, on voit que le boom se fait plus tôt dans un réseau préférentiel et c'est logique, 
+    car il y a plus de HUBs.
 
-    Par ailleurs, on voit que le réseau aléatoire et le réseau initial présente approximativement la même évoultion des infections.
+    Par ailleurs, on voit que le réseau aléatoire et le réseau initial présente approximativement la même
+     évoultion des infections.
 
 
-    NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire, car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
+    NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire,
+    car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. 
+    
+    Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
 
     C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
 
@@ -322,17 +350,11 @@ On a $`\gamma = 2.7 \pm 0.04`$
 ![Scenario/Simulation 2 dans toutes les configurations](./plots_visuals/simulation2_in_all_network_config.png) 
 
 
-    Dans ce graphique, on voit que le réseau préférentiel a toujours le boom d'infections le plus tôt. Car on a autant de HUBs dans les 50% supprimés que ceux qui restent.
+    Dans ce graphique, on voit que le réseau préférentiel a toujours le boom d'infections le plus tôt. 
+    Car on a autant de HUBs dans les 50% supprimés que ceux qui restent.
 
-    Toutefois, cette fois-ci, le réseau initial est en avance par rapport au réseau aléatoire. Cela confirme la note précedente.
-
-<blockquote>
-
-NOTE: ici on doit avoir un boom d'infection un peu plus tôt dans le réseau initial que dans le réseau aléatoire, car le dégres moyen est plus uniformement distribué dans le réseau aléatoire. Autrement dit, il y a plus de chance d'avoir un HUB dans le réseau initial que dans le réseau aléatoire. 
-
-C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dans toutes les configurations)
-
-</blockquote>
+    Toutefois, cette fois-ci, le réseau initial est en avance par rapport au réseau aléatoire. 
+    Cela confirme la note précedente.
 
 
 ---
@@ -345,11 +367,16 @@ C'est plutôt le graphique suivant qui confirme cela. (Scenario/Simulation 2 dan
 
 
 
-    Pour ce qui concerne l'immunisation séléctive, on va avoir un grand frien pour le réseau préférentiel étant donné qu'on a supprimé beaucoup de HUBs dans le groupe 1.
+    Pour ce qui concerne l'immunisation séléctive, on va avoir un grand frien pour le réseau préférentiel 
+    étant donné qu'on a supprimé beaucoup de HUBs dans le groupe 1.
 
-    Et étant donné que la distribution du degrès moyen est uniforme dans le réseau aléatoire, on va avoir le boom le plus tôt.
+    Et étant donné que la distribution du degrès moyen est uniforme dans le réseau aléatoire, on va avoir 
+    le boom le plus tôt.
 
-    Ce qui est intéressant dans ce graphique c'est le cas du réseau initial. Je pense que le fait d'avoir supprimer les HUBs ( groupe 1), ajouté à cela le fait que le degrès moyen n'est pas aussi uniformement distribué que dans le réseau aléatoire, cela a cassé le réseau en plusieurs composantes connexes et donc la propagation capturée par le graphique est limitée a une des composantes! 
+    Ce qui est intéressant dans ce graphique c'est le cas du réseau initial. Je pense que le fait d'avoir 
+    supprimer les HUBs ( groupe 1), ajouté à cela le fait que le degrès moyen n'est pas aussi uniformement 
+    distribué que dans le réseau aléatoire, cela a cassé le réseau en plusieurs composantes connexes et donc 
+    la propagation capturée par le graphique est limitée a une des composantes! 
 
     Cela justifiera les valeurs qui sont assez faibles. (sur l'axe des ordonnées)
 
