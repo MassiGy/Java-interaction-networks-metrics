@@ -242,6 +242,15 @@ On a $`\gamma = 2.7 \pm 0.04`$
 
 **Question n°2.** Simulation de la propagation du virus jour par jour pendant trois mois avec les scénarios données.
 
+    
+    Sénarios 1: On ne fait rien pour empêcher l'épidémie
+    Sénarios 2: On réussit à convaincre 50 % des individus de mettre à jour en permanence 
+    leur anti-virus (immunisation aléatoire)
+    Sénarios 3: On réussit à convaincre 50 % des individus de convaincre un de leurs contacts 
+    de mettre à jour en permanence son anti-virus (immunisation sélective).
+
+
+
 ![agregated_infection_simulations](./plots_visuals/agregated_infection_simulations.png) 
 
     On peut conclure que l'immunisation fonctionne. De plus, l'immunisation séléctive est bien meilleure !
