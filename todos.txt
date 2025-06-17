@@ -1,1 +1,2 @@
 * fix spelling errors
+* review the results and check if they are coherant. (deeper checks)
